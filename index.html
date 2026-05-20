@@ -36,7 +36,11 @@
 
   /* COVER */
   .cover {
-    background: var(--dark);
+    background-color: var(--dark);
+    background-image: url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1600&q=80&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
     color: white;
     padding: 60px 50px 50px;
     position: relative;
@@ -316,15 +320,18 @@
     color: white;
     position: relative;
     overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
   }
 
-  .city-header.rome     { background: linear-gradient(135deg, #6B2020 0%, #8B3A3A 60%, #A84545 100%); }
-  .city-header.florence { background: linear-gradient(135deg, #1A3D2E 0%, #2E5E4E 60%, #3D7A65 100%); }
-  .city-header.lucca    { background: linear-gradient(135deg, #2D4A28 0%, #4A6741 60%, #5E8254 100%); }
-  .city-header.sml      { background: linear-gradient(135deg, #1A3550 0%, #2B5278 60%, #3A6A9A 100%); }
-  .city-header.como     { background: linear-gradient(135deg, #243B56 0%, #3D5A80 60%, #4E72A0 100%); }
-  .city-header.milan    { background: linear-gradient(135deg, #2A2A2A 0%, #4A4A4A 60%, #606060 100%); }
-  .city-header.valencia { background: linear-gradient(135deg, #8B3B0E 0%, #C0622D 60%, #D4773E 100%); }
+  .city-header.rome     { background-color: #6B2020; background-image: url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=1200&q=80&fit=crop'); }
+  .city-header.florence { background-color: #1A3D2E; background-image: url('https://images.unsplash.com/photo-1541370976299-4d24be872f7f?w=1200&q=80&fit=crop'); }
+  .city-header.lucca    { background-color: #2D4A28; background-image: url('https://images.unsplash.com/photo-1534235671915-d61e408de37f?w=1200&q=80&fit=crop'); }
+  .city-header.sml      { background-color: #1A3550; background-image: url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1200&q=80&fit=crop'); }
+  .city-header.como     { background-color: #243B56; background-image: url('https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?w=1200&q=80&fit=crop'); }
+  .city-header.milan    { background-color: #2A2A2A; background-image: url('https://images.unsplash.com/photo-1520175480921-4edfa2983e0f?w=1200&q=80&fit=crop'); }
+  .city-header.valencia { background-color: #8B3B0E; background-image: url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1200&q=80&fit=crop'); }
 
   .city-header::after {
     content: '';
@@ -546,6 +553,22 @@
   .ref-card-detail strong {
     color: white;
   }
+
+  /* DAY PLANS */
+  .day-plan-block { margin-bottom: 28px; }
+  .day-plan-meta { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+  .day-plan-date-label { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
+  .day-plan-name { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--dark); }
+  .day-plan-note { font-size: 11px; color: var(--muted); line-height: 1.6; margin-bottom: 10px; }
+  .village-label { font-size: 11px; font-weight: 600; color: var(--dark); margin: 14px 0 6px; padding-left: 10px; border-left: 3px solid var(--sml); }
+  .steps { list-style: none; border-left: 2px solid var(--border); margin-left: 6px; padding-left: 16px; }
+  .step { display: flex; gap: 12px; padding: 5px 0; position: relative; align-items: flex-start; }
+  .step::before { content: ''; position: absolute; left: -21px; top: 11px; width: 8px; height: 8px; border-radius: 50%; background: white; border: 2px solid var(--border); }
+  .step-time { min-width: 48px; font-size: 10px; font-weight: 600; color: var(--gold); padding-top: 2px; flex-shrink: 0; }
+  .step-body strong { display: block; font-size: 12px; font-weight: 600; color: var(--dark); margin-bottom: 1px; }
+  .step-body span { font-size: 11px; color: var(--muted); line-height: 1.4; display: block; }
+  .backup-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+  @media (max-width: 640px) { .backup-cards { grid-template-columns: 1fr; } }
 
   /* PRINT */
   @media print {
@@ -1212,22 +1235,22 @@
       <div class="thing-item">
         <div class="thing-icon">🏘️</div>
         <div>
-          <div class="thing-name">Cinque Terre — Day 1 (May 19)</div>
-          <div class="thing-desc">Monterosso al Mare + Vernazza — the two largest villages. Hike or take the train between them</div>
+          <div class="thing-name">May 19 — Explored Santa Margherita Ligure</div>
+          <div class="thing-desc">Arrived from Lucca after a long travel day — walked the harbour, waterfront, and town instead</div>
         </div>
       </div>
       <div class="thing-item">
         <div class="thing-icon">🌊</div>
         <div>
-          <div class="thing-name">Cinque Terre — Day 2 (May 20)</div>
-          <div class="thing-desc">Manarola + Riomaggiore — the most photogenic villages. Via dell'Amore path between them</div>
+          <div class="thing-name">May 20 — Cinque Terre: Vernazza + Manarola</div>
+          <div class="thing-desc">The two best villages — Vernazza for the complete harbour experience, Manarola for the iconic clifftop view. Train between them. Full day plan below.</div>
         </div>
       </div>
       <div class="thing-item">
         <div class="thing-icon">⛵</div>
         <div>
-          <div class="thing-name">Portofino (May 21)</div>
-          <div class="thing-desc">Glamorous fishing village, 10 min by bus/ferry from SML. Walk to the lighthouse for views</div>
+          <div class="thing-name">May 21 — Portofino + San Fruttuoso</div>
+          <div class="thing-desc">Ferry to Portofino (~10 min), then boat to the secluded medieval bay of San Fruttuoso if energy allows. Full plan with backups below.</div>
         </div>
       </div>
       <div class="thing-item">
@@ -1238,17 +1261,150 @@
         </div>
       </div>
       <div class="thing-item">
-        <div class="thing-icon">🎨</div>
+        <div class="thing-icon">🎟️</div>
         <div>
-          <div class="thing-name">Cinque Terre Cinematic Card</div>
-          <div class="thing-desc">€18 card covers unlimited train travel between all 5 villages — worth getting</div>
+          <div class="thing-name">Cinque Terre Train Card</div>
+          <div class="thing-desc">Day pass covers unlimited trains between all 5 villages — buy at SML station before departing. One each.</div>
         </div>
       </div>
       <div class="thing-item">
-        <div class="thing-icon">🏊</div>
+        <div class="thing-icon">⚓</div>
         <div>
-          <div class="thing-name">Swimming at Monterosso</div>
-          <div class="thing-desc">The only Cinque Terre village with a real beach — bring a towel</div>
+          <div class="thing-name">San Fruttuoso — the hidden bay</div>
+          <div class="thing-desc">Medieval abbey on a car-free cove — boat access only from Portofino. Almost no crowds. The most memorable spot on the Riviera.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="things-title" style="margin-top: 25px;">Day Plans</div>
+
+    <!-- MAY 20 -->
+    <div class="day-plan-block">
+      <div class="day-plan-meta">
+        <div class="day-plan-date-label">May 20 — Wednesday</div>
+        <div class="day-plan-name">Cinque Terre: Vernazza + Manarola</div>
+      </div>
+      <p class="day-plan-note">Leave early — CT gets packed by 10:30am. Buy the <strong>Cinque Terre Train Card</strong> (day pass, unlimited trains between villages) at the SML station before you board.</p>
+
+      <ul class="steps">
+        <li class="step">
+          <div class="step-time">8:45</div>
+          <div class="step-body"><strong>Leave the Airbnb</strong><span>Head out together</span></div>
+        </li>
+        <li class="step">
+          <div class="step-time">8:50</div>
+          <div class="step-body"><strong>Coffee + pastry near the station</strong><span>Standing, Italian-style — 10 minutes max. Don't sit down.</span></div>
+        </li>
+        <li class="step">
+          <div class="step-time">9:05</div>
+          <div class="step-body"><strong>SML station — buy CT Train Cards</strong><span>One each at the ticket window. Day pass, unlimited trains between all 5 villages.</span></div>
+        </li>
+        <li class="step">
+          <div class="step-time">9:20</div>
+          <div class="step-body"><strong>Train departs toward La Spezia</strong><span>~50 min to Vernazza. The CT villages are on this line.</span></div>
+        </li>
+      </ul>
+
+      <div class="village-label">Vernazza — ~2 hours</div>
+      <ul class="steps">
+        <li class="step">
+          <div class="step-time">10:10</div>
+          <div class="step-body"><strong>Arrive Vernazza — walk down Via Roma</strong><span>Exit the station, walk straight toward the sea. 3 minutes, leads directly to the harbor.</span></div>
+        </li>
+        <li class="step">
+          <div class="step-time"></div>
+          <div class="step-body"><strong>Piazza Marconi — the harbor square</strong><span>Stop here. This is the money shot: colored buildings, small harbor, castle above. Take it in.</span></div>
+        </li>
+        <li class="step">
+          <div class="step-time"></div>
+          <div class="step-body"><strong>Walk the harbor breakwater</strong><span>The stone pier jutting into the sea — best angle back at the village.</span></div>
+        </li>
+        <li class="step">
+          <div class="step-time"></div>
+          <div class="step-body"><strong>Climb to Castello Doria</strong><span>Stairs on the east side of the harbor. ~200 steps, 10 min. €1.50 entry. Best panorama of the whole trip from the top.</span></div>
+        </li>
+        <li class="step">
+          <div class="step-time"></div>
+          <div class="step-body"><strong>Coffee or gelato at the harbor</strong><span>Sit at one of the harbor cafés — rest your legs, the view from a table here is excellent.</span></div>
+        </li>
+        <li class="step">
+          <div class="step-time">12:15</div>
+          <div class="step-body"><strong>Back to station</strong><span>Wander up Via Roma, browse the shops, back to the station for the train to Manarola.</span></div>
+        </li>
+      </ul>
+
+      <div class="village-label">Manarola — ~2.5 hours</div>
+      <ul class="steps">
+        <li class="step">
+          <div class="step-time">12:40</div>
+          <div class="step-body"><strong>Arrive Manarola — exit through the tunnel</strong><span>You emerge onto Via Discovolo, the main village street.</span></div>
+        </li>
+        <li class="step">
+          <div class="step-time"></div>
+          <div class="step-body"><strong>Turn left — walk uphill through the village first</strong><span>Go up while you have energy. Colorful houses, much quieter than Vernazza.</span></div>
+        </li>
+        <li class="step">
+          <div class="step-time"></div>
+          <div class="step-body"><strong>Punta Bonfiglio viewpoint</strong><span>Follow signs at the top of the village. Small headland with a terrace — look back at the whole village stacked on the cliff. This is the iconic Manarola shot.</span></div>
+        </li>
+        <li class="step">
+          <div class="step-time"></div>
+          <div class="step-body"><strong>Walk back down to the harbor rocks</strong><span>Steps lead to the natural port — fishing boats, flat rocks by the water. Rest here 10–15 min.</span></div>
+        </li>
+        <li class="step">
+          <div class="step-time">13:15</div>
+          <div class="step-body"><strong>Lunch on Via Discovolo</strong><span>Several solid restaurants on the main street. Sit down, take a proper break.</span></div>
+        </li>
+        <li class="step">
+          <div class="step-time">14:30</div>
+          <div class="step-body"><strong>Final wander, then head to station</strong><span>One last slow walk back through the village toward the station.</span></div>
+        </li>
+        <li class="step">
+          <div class="step-time">15:30</div>
+          <div class="step-body"><strong>Train back to SML</strong><span>Via La Spezia — ~1 hour. Back in SML around 16:30. Aperitivo on the waterfront if anyone has legs left.</span></div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAY 21 -->
+    <div class="day-plan-block">
+      <div class="day-plan-meta">
+        <div class="day-plan-date-label">May 21 — Thursday</div>
+        <div class="day-plan-name">Portofino + San Fruttuoso</div>
+      </div>
+      <p class="day-plan-note">Take the morning ferry from SML to Portofino (~10 min, sheltered coastal crossing — low seasick risk). If energy allows, continue by boat to San Fruttuoso — a medieval abbey in a secluded car-free bay with almost no crowds.</p>
+
+      <ul class="steps">
+        <li class="step">
+          <div class="step-time">Morning</div>
+          <div class="step-body"><strong>Ferry SML → Portofino (~10 min)</strong><span>Take the boat, not the bus — the sea approach gives the best first view of the harbor.</span></div>
+        </li>
+        <li class="step">
+          <div class="step-time"></div>
+          <div class="step-body"><strong>Walk the Portofino harbor</strong><span>The piazza, pastel buildings, yachts. Very photogenic, very polished. Best view in Europe of its kind.</span></div>
+        </li>
+        <li class="step">
+          <div class="step-time"></div>
+          <div class="step-body"><strong>Walk up to the church (San Giorgio)</strong><span>Above the piazza — panoramic view back over the harbor. 10 min climb, worth it.</span></div>
+        </li>
+        <li class="step">
+          <div class="step-time">If energy</div>
+          <div class="step-body"><strong>Boat Portofino → San Fruttuoso (~20 min)</strong><span>Medieval abbey sitting alone in a wild, car-free cove. Almost no crowds — boat-only access. Lunch here, explore the abbey, sit by the water. The most memorable spot of the whole Riviera leg.</span></div>
+        </li>
+        <li class="step">
+          <div class="step-time"></div>
+          <div class="step-body"><strong>Boat back to SML</strong><span>Direct from San Fruttuoso, or via Portofino.</span></div>
+        </li>
+      </ul>
+
+      <div class="backup-cards">
+        <div class="info-card">
+          <div class="info-card-label">If tired — Portofino only</div>
+          <div class="info-card-value" style="font-size:12px;">Skip San Fruttuoso. Ferry to Portofino, 2 hours, ferry back. Relaxed afternoon in SML.</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">If seasick — no boats</div>
+          <div class="info-card-value" style="font-size:12px;">Portofino by bus (10 min from SML) + Camogli by train (15 min). Colorful fishing village, no boats needed.</div>
         </div>
       </div>
     </div>
